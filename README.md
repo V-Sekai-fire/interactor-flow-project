@@ -1,27 +1,15 @@
-# flow-project
+# interactor-flow-project
 
-Godot project that exercises the IDTXFlow addon against the canonical ANNY
-animation fixture.
+A Godot project that exercises the IDTXFlow scene-import addon against the canonical ANNY animation fixture.
 
-## Fixture data
+## What it is for
 
-The animation fixture and its baked artifacts are not in this repository. Fetch
-them from Hugging Face into the project root before opening the editor:
+Its scenes and scripts import ANNY's animation and blendshape fixtures through the addon and inspect, render and test the result, and the Python scripts regenerate the USD fixture from its source arrays. The fixture's provenance is on the dataset card of `chibifire/anny-anim-fixture`.
 
-    hf download --repo-type dataset chibifire/anny-anim-fixture \
-      anny_anim_fixture.npz anny_anim_fixture.names.json \
-      render_test.tscn \
-      --local-dir .
+## Run
 
-    hf download --repo-type dataset chibifire/anny-anim-fixture \
-      anny_anim_test.usdz anny_anim_test.glb \
-      --local-dir art/canonical_anny
+The fixture files are not tracked. Download the files `.gitignore` names from the `chibifire/anny-anim-fixture` dataset to the same paths, then open `project.godot` in the editor.
 
-The four fixture files (`.npz` source arrays, `.names.json` joint/blendshape
-names, `.usdz` canonical stage, `.glb` delivery) plus the Godot scene
-(`render_test.tscn`, 122 MB of baked animation tracks that exceed GitHub's
-100 MB limit) are all `.gitignore`d here.
+## Licence
 
-`make_anny_anim_fixture_b.py` regenerates the `.usdz` from the `.npz` inputs;
-see [`chibifire/anny-anim-fixture`](https://huggingface.co/datasets/chibifire/anny-anim-fixture)
-for the dataset card and provenance.
+MIT; see `LICENSE`.
