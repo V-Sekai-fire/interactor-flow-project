@@ -8,7 +8,18 @@ Its scenes and scripts import ANNY's animation and blendshape fixtures through t
 
 ## Run
 
-The fixture files are not tracked. Download the files `.gitignore` names from the `chibifire/anny-anim-fixture` dataset to the same paths, then open `project.godot` in the editor.
+The fixture files are not tracked. Fetch them from the `chibifire/anny-anim-fixture` dataset:
+
+```sh
+hf download --repo-type dataset chibifire/anny-anim-fixture \
+  anny_anim_fixture.npz anny_anim_fixture.names.json render_test.tscn \
+  --local-dir .
+hf download --repo-type dataset chibifire/anny-anim-fixture \
+  anny_anim_test.usdz anny_anim_test.glb \
+  --local-dir art/canonical_anny
+```
+
+Then open `project.godot` in the editor. The addon ships Windows binaries only, so the project opens on Windows.
 
 ## Licence
 
