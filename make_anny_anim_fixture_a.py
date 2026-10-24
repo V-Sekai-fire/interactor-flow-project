@@ -15,7 +15,7 @@ SYSTEMIC INVENTORY -- everything the source authors, and where it goes:
 Deferred, documented rather than dropped:
   skin textures (mpfb_*.jpg)       -> multi-layer MPFB material; compositing
                                       needs the Mitsuba bake that replaced the
-                                      blocklisted Blender path (RFD 1122)
+                                      blocklisted Blender path (RFD66606-1122)
   body_parts_segmentation.yaml     -> carries part colors only; the per-vertex
                                       mapping lives elsewhere and is not yet read
 
